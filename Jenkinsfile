@@ -14,6 +14,9 @@ pipeline {
             }
         }
         stage('Build Image') {
+            agent { 
+                label 'minikube' 
+            } 
             steps {
                 echo 'Construyendo imagen de Docker...'
                 sh 'ls -l'
