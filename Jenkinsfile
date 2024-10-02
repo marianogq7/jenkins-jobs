@@ -13,6 +13,12 @@ pipeline {
                 }
             }
         }
+        stage('Build Image') {
+            steps {
+                echo 'Construyendo imagen de Docker...'
+                sh 'docker build -t alvarogq/libros .'
+            }
+        }
 
     }
 }
