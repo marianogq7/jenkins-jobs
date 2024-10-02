@@ -16,6 +16,8 @@ pipeline {
         stage('Build Image') {
             steps {
                 echo 'Construyendo imagen de Docker...'
+                sh 'ls -l'
+                sh 'pwd'
                 sh 'docker build -t alvarogq/libros .'
             }
         }
